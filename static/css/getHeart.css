@@ -1,0 +1,17 @@
+/* tr:nth-child(even) {
+    background-color: #a4d9d9;
+} */
+
+table {
+    border: 1px;
+    font-size: 24px;
+    text-align: right;
+}
+
+.firstRow {
+    background-color: white;
+}
+
+.headCenter {
+    text-align: center;
+}

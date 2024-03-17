@@ -1,0 +1,1 @@
+export PYTHONPATH=/private/var/mobile/Library/Mobile Documents/iCloud~AsheKube~app~a-Shell/Documents

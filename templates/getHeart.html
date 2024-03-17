@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<meta charset="utf-8" />
+<title>血壓測量記錄</title>
+<link rel="stylesheet" href="./../static/css/getHeart.css" type="text/css">
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <tr class="headCenter">
+                <th colspan="7">{% raw %}{{ message }}{% endraw %}</th>
+            </tr>
+            <tr class="headCenter">
+                <th rowspan="2">日期</th>
+                <th colspan="3">早</th>
+                <th colspan="3">晚</th>
+            </tr>
+            <tr class="firstRow">
+                <th>收縮壓</th>
+                <th>舒張壓</th>
+                <th>心跳</th>
+                <th>收縮壓</th>
+                <th>舒張壓</th>
+                <th>心跳</th>
+            </tr>
+            {% for k,v in h.items() %}
+            <tr v-bind:style="{ backgroundColor:{{ 'bk1' if (loop.index % 2)==1 else 'bk2'}} }">
+                <td>{{ k }}</td>
+                {%- if v[0] %}
+                <td>{{ v[0][0] }}</td>
+                <td>{{ v[0][1] }}</td>
+                <td>{{ v[0][2] }}</td>
+                {%- else %}
+                <td></td>
+                <td></td>
+                <td></td>
+                {%- endif %}
+                {%- if v[1] %}
+                <td>{{ v[1][0] }}</td>
+                <td>{{ v[1][1] }}</td>
+                <td>{{ v[1][2] }}</td>
+                {%- else %}
+                <td></td>
+                <td></td>
+                <td></td>
+                {%- endif %}
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>　</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./../static/js/getheart.js"></script>
+
+</html>

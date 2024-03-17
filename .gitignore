@@ -1,0 +1,6 @@
+temp/
+test/
+uploads/
+__pycache__/
+.Trash/
+db/
