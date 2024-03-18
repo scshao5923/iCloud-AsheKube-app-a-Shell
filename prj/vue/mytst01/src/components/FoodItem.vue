@@ -2,6 +2,7 @@
     <div>
       <h2>{{ foodName }}</h2>
       <p>{{ foodDesc }}</p>
+      <img src="/favicon.ico" v-show="isFavorite"/>
     </div>
   </template>
   
@@ -9,7 +10,8 @@
     export default {
       props: [
         'foodName',
-        'foodDesc'
+        'foodDesc',
+        'isFavorite'
       ]
     }
   </script>
