@@ -8,11 +8,25 @@
   
   <script>
     export default {
-      props: [
-        'foodName',
-        'foodDesc',
-        'isFavorite'
-      ]
+      data(){
+        return {
+          eric:'eric'
+        }
+        
+      },
+      // props: [
+      //   'foodName',
+      //   'foodDesc',
+      //   'isFavorite'
+      // ]
+      props:{
+        foodName:{
+          type: String,
+          required: true
+        },
+        foodDesc: String,
+        isFavorite: Boolean
+      }
     }
   </script>
   

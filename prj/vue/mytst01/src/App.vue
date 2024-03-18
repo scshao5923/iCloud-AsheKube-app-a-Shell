@@ -13,6 +13,9 @@
       food-name="Rice" 
       food-desc="Rice is a type of grain that people like to eat." 
       v-bind:is-favorite="false" />
+    <food-item 
+      food-desc="no food name" 
+      is-favorite="eric" />
   </div>
 </template>
 
