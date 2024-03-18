@@ -2,6 +2,7 @@
     <div v-on:click="countClicks">
         <h2>{{ name }}</h2>
         <p>{{ message }}</p>
+        <p>foodName:{{ foodName }}</p>
         <p id="red">You have clicked me {{ clicks }} times.</p>
     </div>
 </template>
@@ -19,7 +20,10 @@ export default {
         countClicks() {
             this.clicks++
         }
-    }
+    },
+    props:[
+        "foodName"
+    ]
 };
 </script>
 
