@@ -15,4 +15,8 @@
   padding: 10px;
   background-color: lightgreen;
 }
+
+#app>div:hover {
+  cursor: pointer;
+}
 </style>
