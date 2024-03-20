@@ -2,7 +2,8 @@
   <div>
     <h2>{{ foodName }}</h2>
     <p>{{ foodDesc }}</p>
-    <img src="/favicon.ico" v-show="isFavorite" />
+    <img src="/favicon.ico" v-show="foodIsFavorite" />
+    <button v-on:click="toggleFavorite">Like</button>
   </div>
 </template>
 
@@ -10,7 +11,8 @@
 export default {
   data() {
     return {
-      eric: 'eric'
+      eric: 'eric',
+      foodIsFavorite: this.isFavorite
     }
 
   },
@@ -28,12 +30,17 @@ export default {
       type: String,
       required: false,
       default: 'This is the default description.',
-      validator: value => ( 20<value.length && value.length<50 ) ? true: false
+      validator: value => (20 < value.length && value.length < 50) ? true : false
     },
     isFavorite: {
       type: Boolean,
       required: false,
       default: false
+    }
+  },
+  methods: {
+    toggleFavorite() {
+      this.foodIsFavorite = !this.foodIsFavorite;
     }
   }
 }
