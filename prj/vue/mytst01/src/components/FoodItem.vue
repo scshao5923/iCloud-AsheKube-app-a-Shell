@@ -27,7 +27,8 @@ export default {
     foodDesc: {
       type: String,
       required: false,
-      default: 'This is the default description.'
+      default: 'This is the default description.',
+      validator: value => ( 20<value.length && value.length<50 ) ? true: false
     },
     isFavorite: {
       type: Boolean,
